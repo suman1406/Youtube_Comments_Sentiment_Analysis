@@ -2,6 +2,14 @@ import os
 import pandas as pd
 from googleapiclient.discovery import build
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the environment variables
+api_key = os.getenv('API')
+
 def preprocess_text(text):
     if not isinstance(text, str):
         return ""
@@ -14,7 +22,7 @@ def preprocess_text(text):
     text = text.lower()
     return text
 
-API_KEY = 'AIzaSyDJqw4Mh_tW-zaobbqdBhNlyxkeaEbHzI8'
+API_KEY = api_key
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 def get_comments(video_id, max_results=100):
