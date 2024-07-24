@@ -20,7 +20,7 @@ This project aims to analyze and categorize the sentiment of YouTube comments us
 
 1. **Clone the repository**:
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/suman1406/Youtube_Comments_Sentiment_Analysis.git
     ```
 
 2. **Install dependencies**:
